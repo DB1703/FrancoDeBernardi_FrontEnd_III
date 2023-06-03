@@ -29,6 +29,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Perfect DOS VGA 437', sans-serif;
+  font-family: 'Perfect DOS VGA 437 Win', sans-serif;
 }
 
 h1 {
