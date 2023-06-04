@@ -23,7 +23,7 @@ function Form() {
             setErrorPerro()
         }
 
-        if (!error & !errorPerro) {
+        if (error && errorPerro != undefined) {
             setSubmitedValues({name, raza})
             
         }
