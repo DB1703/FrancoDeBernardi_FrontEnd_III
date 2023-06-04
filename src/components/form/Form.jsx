@@ -7,8 +7,7 @@ function Form() {
     const [raza, setRaza] = useState('')
     const [error, setError] = useState('')
     const [errorPerro, setErrorPerro] = useState('')
-    const [nameValor, setNameValor] = useState('')
-    const [razaValor, setRazaValor] = useState('')
+    const [submitedValues, setSubmitedValues] = useState()
 
     function handlerSubmit(e) {
         e.preventDefault()
@@ -16,14 +15,17 @@ function Form() {
             setError('La longitud del nombre debe ser mayor a 3 caracteres')
         } else {
             setError()
-            setNameValor(name)
         }
         
         if (raza.length < 6) {
             setErrorPerro('La longitud de la raza debe ser mayor a 6 caracteres')
         } else {
             setErrorPerro()
-            setRazaValor(raza)
+        }
+
+        if (!error & !errorPerro) {
+            setSubmitedValues({name, raza})
+            
         }
     }
 
@@ -58,7 +60,7 @@ function Form() {
                 <button type="submit">Enviar</button>
             </form>
 
-            {}
+                {submitedValues ? <Card nombre={name} raza={raza}> </Card> : undefined}
         </>
     )
 }

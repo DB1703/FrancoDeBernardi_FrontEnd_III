@@ -1,6 +1,7 @@
 .father {
         display: flex;
         flex-direction: column;
+        margin-top: 15px;
         gap: 16px;
         padding: 16px;
         border: 0.5px solid black;
