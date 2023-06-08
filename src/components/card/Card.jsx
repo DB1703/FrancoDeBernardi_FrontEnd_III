@@ -1,6 +1,8 @@
 import styles from '../card/card.module.css'
 
 function Card(props) {
+
+    console.log("render");
     return (
         <>
             <div className={styles.father}>
